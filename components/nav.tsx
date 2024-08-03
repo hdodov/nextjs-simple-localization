@@ -1,5 +1,9 @@
 import { locales, Page, pages } from "@/config";
-import { basePathLocalized, getLocale } from "@/utilities/l10n";
+import {
+  basePathLocalized,
+  getLocale,
+  getTranslations,
+} from "@/utilities/l10n";
 import Link from "next/link";
 
 export default function Nav({
@@ -11,6 +15,7 @@ export default function Nav({
 }) {
   const activeLocale = getLocale(locale);
   const activePage = !page ? "home" : page;
+  const t = getTranslations(activeLocale);
   return (
     <div className="flex flex-col gap-2">
       <div className="flex justify-center gap-2">
@@ -39,7 +44,7 @@ export default function Nav({
             }`}
             key={page}
           >
-            {page}
+            {t.pages[page]}
           </Link>
         ))}
       </div>
