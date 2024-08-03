@@ -1,10 +1,21 @@
 {
-  "meta": {
-    "title": "Localización Next",
-    "description": "Sitio de demostración para la implementación simple de localización."
+  "pages": {
+    "home": "Inicio",
+    "about": "Acerca de"
   },
   "home": {
+    "meta": {
+      "title": "Localización Next",
+      "description": "Sitio de demostración para la implementación simple de localización."
+    },
     "heading": "¡Hola Mundo!",
     "subheading": "Esta es la versión en español."
+  },
+  "about": {
+    "meta": {
+      "description": "Información sobre el autor del sitio."
+    },
+    "heading": "¡Me llamo Hristiyan!",
+    "subheading": "Encuéntrame en mi sitio web <a href=\"https://dodov.dev/\" target=\"_blank\">dodov.dev</a>."
   }
 }

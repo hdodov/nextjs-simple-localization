@@ -6,8 +6,8 @@ import Main from "./main";
 export function generateMetadata({ params: { locale } }: Props): Metadata {
   const t = getTranslations(locale);
   return {
-    title: t.meta.title,
-    description: t.meta.description,
+    title: t.home.meta.title,
+    description: t.home.meta.description,
   };
 }
 

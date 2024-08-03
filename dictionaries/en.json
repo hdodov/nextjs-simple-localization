@@ -1,10 +1,21 @@
 {
-  "meta": {
-    "title": "Next Localization",
-    "description": "Demo site for simple localization implementation."
+  "pages": {
+    "home": "Home",
+    "about": "About"
   },
   "home": {
+    "meta": {
+      "title": "Next Localization",
+      "description": "Demo site for simple localization implementation."
+    },
     "heading": "Hello World!",
     "subheading": "This is the English version."
+  },
+  "about": {
+    "meta": {
+      "description": "Information about the site author."
+    },
+    "heading": "My name is Hristiyan!",
+    "subheading": "Find me at my website <a href=\"https://dodov.dev/\" target=\"_blank\">dodov.dev</a>."
   }
 }
