@@ -1,9 +1,5 @@
 import { locales, Page, pages } from "@/config";
-import {
-  getLocale,
-  getTranslations,
-  pagePathLocalized,
-} from "@/utilities/l10n";
+import { getLocale, getPath, getTranslations } from "@/utilities/l10n";
 import Link from "next/link";
 
 function List({
@@ -42,14 +38,14 @@ export default function Nav({
       <List
         items={locales.map((l) => ({
           active: l === activeLocale,
-          href: pagePathLocalized(l, page),
+          href: getPath(l, page),
           text: l,
         }))}
       />
       <List
         items={pages.map((p) => ({
           active: p === page,
-          href: pagePathLocalized(activeLocale, p),
+          href: getPath(activeLocale, p),
           text: t.pages[p],
         }))}
       />

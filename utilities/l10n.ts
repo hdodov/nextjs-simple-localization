@@ -16,16 +16,12 @@ export const getLocale = (input?: string): Locale =>
 export const getTranslations = (input?: string) =>
   translations[getLocale(input)];
 
-export const basePathLocalized = (locale?: Locale) =>
-  `/${locale === defaultLocale ? "" : `${locale}/`}`;
+export const getPath = (locale: Locale, page?: Page) =>
+  `/${locale === defaultLocale ? "" : `${locale}/`}${
+    !page || page === "home" ? "" : `${page}/`
+  }`;
 
-export const pagePathLocalized = (locale: Locale, page: Page) =>
-  `${basePathLocalized(locale)}${page === "home" ? "" : page}/`;
-
-export const baseUrlLocalized = (locale?: Locale) =>
-  `${baseUrl}${locale === defaultLocale ? "" : `/${locale}`}`;
-
-export const pageUrlLocalized = (locale: Locale, page: Page) =>
-  `${baseUrlLocalized(locale)}${page === "home" ? "" : `/${page}`}`;
+export const getUrl = (locale: Locale, page?: Page) =>
+  `${baseUrl}${getPath(locale, page)}`.replace(/\/$/, "");
 
 export const state = { locale: defaultLocale };
