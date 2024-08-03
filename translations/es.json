@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "title": "Localización Next",
+    "description": "Sitio de demostración para la implementación simple de localización."
+  },
+  "home": {
+    "heading": "¡Hola Mundo!",
+    "subheading": "Esta es la versión en español."
+  }
+}

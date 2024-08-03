@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "title": "Next Localization",
+    "description": "Demo site for simple localization implementation."
+  },
+  "home": {
+    "heading": "Hello World!",
+    "subheading": "This is the English version."
+  }
+}
