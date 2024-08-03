@@ -1,7 +1,7 @@
-import Nav from "@/components/nav";
 import { getTranslations } from "@/utilities/l10n";
 import { Metadata } from "next";
 import { Props } from "./layout";
+import Main from "./main";
 
 export function generateMetadata({ params: { locale } }: Props): Metadata {
   const t = getTranslations(locale);
@@ -14,10 +14,9 @@ export function generateMetadata({ params: { locale } }: Props): Metadata {
 export default function Home({ params: { locale } }: Readonly<Props>) {
   const t = getTranslations(locale);
   return (
-    <main className="my-16 px-4 text-center">
-      <Nav locale={locale} page="home" />
+    <Main locale={locale} page="home">
       <h1 className="text-4xl font-bold my-4">{t.home.heading}</h1>
       <p className="text-lg">{t.home.subheading}</p>
-    </main>
+    </Main>
   );
 }
