@@ -1,10 +1,32 @@
 import { locales, Page, pages } from "@/config";
 import {
-  basePathLocalized,
   getLocale,
   getTranslations,
+  pagePathLocalized,
 } from "@/utilities/l10n";
 import Link from "next/link";
+
+function List({
+  items,
+}: {
+  items: { active: boolean; href: string; text: string }[];
+}) {
+  return (
+    <div className="flex justify-center gap-2">
+      {items.map(({ active, href, text }) => (
+        <Link
+          className={`px-3 py-1 rounded-md ${
+            active ? "bg-slate-200" : "bg-slate-100"
+          }`}
+          href={href}
+          key={text}
+        >
+          {text}
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export default function Nav({
   locale,
@@ -14,40 +36,23 @@ export default function Nav({
   page: Page;
 }) {
   const activeLocale = getLocale(locale);
-  const activePage = !page ? "home" : page;
   const t = getTranslations(activeLocale);
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex justify-center gap-2">
-        {locales.map((locale) => (
-          <Link
-            className={`px-3 py-1 rounded-md ${
-              locale === activeLocale ? "bg-slate-200" : "bg-slate-100"
-            }`}
-            href={`${basePathLocalized(locale)}${
-              activePage === "home" ? "" : page
-            }`}
-            key={locale}
-          >
-            {locale}
-          </Link>
-        ))}
-      </div>
-      <div className="flex justify-center gap-2">
-        {pages.map((page) => (
-          <Link
-            className={`px-3 py-1 rounded-md ${
-              page === activePage ? "bg-slate-200" : "bg-slate-100"
-            }`}
-            href={`${basePathLocalized(activeLocale)}${
-              page === "home" ? "" : page
-            }`}
-            key={page}
-          >
-            {t.pages[page]}
-          </Link>
-        ))}
-      </div>
+      <List
+        items={locales.map((l) => ({
+          active: l === activeLocale,
+          href: pagePathLocalized(l, page),
+          text: l,
+        }))}
+      />
+      <List
+        items={pages.map((p) => ({
+          active: p === page,
+          href: pagePathLocalized(activeLocale, p),
+          text: t.pages[p],
+        }))}
+      />
     </div>
   );
 }

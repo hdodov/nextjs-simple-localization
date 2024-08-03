@@ -16,6 +16,6 @@
       "description": "Информация за автора на сайта."
     },
     "heading": "Казвам се Християн!",
-    "subheading": "Намерете ме на моя уебсайт <a href=\"https://dodov.dev/\" target=\"_blank\">dodov.dev</a>."
+    "subheading": "Намерете ме на моя уебсайт <a href=\"https://dodov.dev/?utm_source=nextjs-simple-localization\" target=\"_blank\">dodov.dev</a>."
   }
 }

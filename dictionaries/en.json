@@ -16,6 +16,6 @@
       "description": "Information about the site author."
     },
     "heading": "My name is Hristiyan!",
-    "subheading": "Find me at my website <a href=\"https://dodov.dev/\" target=\"_blank\">dodov.dev</a>."
+    "subheading": "Find me at my website <a href=\"https://dodov.dev/?utm_source=nextjs-simple-localization\" target=\"_blank\">dodov.dev</a>."
   }
 }

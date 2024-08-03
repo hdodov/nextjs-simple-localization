@@ -3,6 +3,7 @@ import {
   defaultLocale,
   Locale,
   locales,
+  Page,
   translations,
 } from "@/config";
 
@@ -17,6 +18,9 @@ export const getTranslations = (input?: string) =>
 
 export const basePathLocalized = (locale?: Locale) =>
   `/${locale === defaultLocale ? "" : `${locale}/`}`;
+
+export const pagePathLocalized = (locale: Locale, page: Page) =>
+  `${basePathLocalized(locale)}${page === "home" ? "" : page}`;
 
 export const baseUrlLocalized = (locale?: Locale) =>
   `${baseUrl}${locale === defaultLocale ? "" : `/${locale}`}`;
