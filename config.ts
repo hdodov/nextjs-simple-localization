@@ -1,6 +1,6 @@
-import bg from "./translations/bg.json";
-import en from "./translations/en.json";
-import es from "./translations/es.json";
+import bg from "./dictionaries/bg.json";
+import en from "./dictionaries/en.json";
+import es from "./dictionaries/es.json";
 
 export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 export const translations = { bg, en, es } as const;
