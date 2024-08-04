@@ -1,7 +1,5 @@
 {
   "name": "nextjs-simple-localization",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,5 +20,13 @@
     "tailwindcss": "^3.4.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5"
+  },
+  "repository": {
+    "url": "https://github.com/hdodov/nextjs-simple-localization"
+  },
+  "author": {
+    "name": "Hristiyan Dodov",
+    "email": "hello@dodov.dev",
+    "url": "https://dodov.dev/?utm_source=nextjs-simple-localization&utm_content=package-json"
   }
 }

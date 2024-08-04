@@ -16,6 +16,6 @@
       "description": "Información sobre el autor del sitio."
     },
     "heading": "¡Me llamo Hristiyan!",
-    "subheading": "Encuéntrame en mi sitio web <a href=\"https://dodov.dev/?utm_source=nextjs-simple-localization\" target=\"_blank\">dodov.dev</a>."
+    "subheading": "Encuéntrame en mi sitio web <a href=\"https://dodov.dev/?utm_source=nextjs-simple-localization&utm_content=es-json\" target=\"_blank\">dodov.dev</a>."
   }
 }
