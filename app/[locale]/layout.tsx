@@ -13,7 +13,7 @@ export type Props = {
 export function generateStaticParams(): Props["params"][] {
   return locales
     .filter((locale) => locale !== defaultLocale)
-    .map((locale) => ({ locale: locale }));
+    .map((locale) => ({ locale }));
 }
 
 export default function Home({
