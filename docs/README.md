@@ -11,3 +11,12 @@ Setup for **static sites** with clean default locale URLs (not containing the lo
 - ✅ No external dependencies used, only bare Next.js
 
 **Full explanation here:** [dodov.dev/blog/how-to-set-up-simple-nextjs-localization](https://dodov.dev/blog/how-to-set-up-simple-nextjs-localization?utm_source=nextjs-simple-localization&utm_content=readme)
+
+## Preview
+
+1. `git clone git@github.com:hdodov/nextjs-simple-localization.git`
+1. `cd nextjs-simple-localization && npm i`
+1. `npm run dev`
+1. http://localhost:3000
+
+![localhost demo image](./demo.png)
